@@ -1,0 +1,36 @@
+.button {
+    border: 0.52px solid white;
+    background-color: rgb(222, 220, 233);
+    font-size: 24px;
+    color: rgb(36, 34, 34);
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+    padding-top: 9%;
+  }
+
+  .button:nth-child(4n){
+    background-color: rgb(244,152,60);
+  }
+
+  .button:nth-last-child(1){
+    background-color: rgb(244,152,60);
+  }
+
+  .button:nth-last-child(3){
+    grid-column: 1 / span 2;
+    grid-row: 5;
+  }
+  
+  .button:hover {
+    background-color: rgb(92, 92, 97);
+  }
+  
+  .equals {
+    grid-column: 3 / 5;
+    background-color: rgb(243, 61, 29);
+  }
+  
+  .equals:hover {
+    background-color: rgb(228, 39, 15);
+  }
