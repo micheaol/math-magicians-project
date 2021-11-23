@@ -10,11 +10,11 @@
   }
 
   .button:nth-child(4n){
-    background-color: rgb(216, 150, 138);
+    background-color: rgb(244,152,60);
   }
 
   .button:nth-last-child(1){
-    background-color: rgb(216, 150, 138);
+    background-color: rgb(244,152,60);
   }
 
   .button:nth-last-child(3){
