@@ -10,9 +10,9 @@ import './Button.css';
 class Button extends Component {
   render() {
     return (
-      <div className="button">
+      <button className="button" onClick={() => this.props.handleClick()} name={this.props.number} type="submit">
         {this.props.number}
-      </div>
+      </button>
     );
   }
 }
