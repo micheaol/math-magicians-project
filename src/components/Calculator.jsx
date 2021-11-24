@@ -1,4 +1,12 @@
 /* eslint-disable linebreak-style */
+/* eslint-disable react/no-array-index-key */
+/* eslint-disable linebreak-style */
+/* eslint-disable arrow-body-style */
+/* eslint-disable linebreak-style */
+/* eslint-disable react/prop-types */
+/* eslint-disable linebreak-style */
+/* eslint-disable max-len */
+/* eslint-disable linebreak-style */
 /* eslint-disable react/no-access-state-in-setstate */
 /* eslint-disable react/destructuring-assignment */
 /* eslint-disable linebreak-style */
@@ -8,6 +16,7 @@ import './Calculator.css';
 import React, { Component } from 'react';
 import ButtonWraper from './ButtonWraper';
 import Screen from './Screen';
+import Button from './Button';
 // import calculate from '../logic/calculate';
 // import operate from '../logic/operate';
 
@@ -23,11 +32,36 @@ class Calculator extends Component {
   }
 
   render() {
-    const { count } = this.state;
+    // const numbers = ['A/C', '+/-', '%', '÷', '7', '8', '9', 'x', '4', '5', '6', '-', '1', ' 2', '3', '+', '0', '.', '='];
+
+    const btnValues = [
+      ['A/C', '+/-', '%', '÷'],
+      [7, 8, 9, 'X'],
+      [4, 5, 6, '-'],
+      [1, 2, 3, '+'],
+      [0, '.', '='],
+    ];
+    // changeCount();
+    // const { count } = this.state;
     return (
       <div className="wrapper">
-        <Screen count={count} />
-        <ButtonWraper handleClick={this.handleClick} />
+        <Screen value="0" />
+        <ButtonWraper>
+          {
+            btnValues.flat().map((btn, i) => {
+              return (
+                <Button
+                  key={i}
+                  className={btn === '=' ? 'equals' : ''}
+                  value={btn}
+                  onClick={() => {
+                    console.log(`${btn} clicked!`);
+                  }}
+                />
+              );
+            })
+          }
+        </ButtonWraper>
       </div>
     );
   }

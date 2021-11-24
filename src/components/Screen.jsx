@@ -14,7 +14,7 @@ class Screen extends Component {
   render() {
     return (
       <div className="screen">
-          <h1>{this.props.count}</h1>
+          <h1>{this.props.value}</h1>
       </div>
     );
   }
