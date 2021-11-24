@@ -38,14 +38,14 @@ class Calculator extends Component {
     this.state = {
       numberOne: 0,
       numberTwo: 0,
-      operation: '',
+      // operation: '+',
     };
 
     const calc = () => this.setState({ numberOne: () => operate() });
   }
 
   render() {
-    const operations = [
+    const operation = [
       ['A/C', '+/-', '%', '÷'],
       [7, 8, 9, 'X'],
       [4, 5, 6, '-'],
@@ -53,21 +53,21 @@ class Calculator extends Component {
       [0, '.', '='],
     ];
 
-    const { numberOne, numberTwo, operation } = this.state;
-
+    // const { numberOne, numberTwo, operation } = this.state;
+    console.log(calculate());
     return (
       <div className="wrapper">
-        <Screen value={numberOne, numberTwo} />
+        <Screen value={this.state.numberOne ? this.state.numberOne : this.state.numberTwo} />
         <ButtonWraper>
           {
-            operations.flat().map((btn, i) => {
+            operation.flat().map((btn, i) => {
               return (
                 <Button
                   key={i}
                   className={btn === '=' ? 'equals' : ''}
                   value={btn}
                   onClick={
-                    () => console.log(this.state({ numberOne: 5, numberTwo: 6 }))
+                   console.log('I am from click')
                   }
                 />
               );
