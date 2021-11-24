@@ -1,4 +1,13 @@
 /* eslint-disable linebreak-style */
+/* eslint-disable quotes */
+/* eslint-disable no-nested-ternary */
+/* eslint-disable linebreak-style */
+/* eslint-disable no-sequences */
+/* eslint-disable linebreak-style */
+/* eslint-disable no-unused-vars */
+/* eslint-disable linebreak-style */
+/* eslint-disable no-unneeded-ternary */
+/* eslint-disable linebreak-style */
 /* eslint-disable react/no-array-index-key */
 /* eslint-disable linebreak-style */
 /* eslint-disable arrow-body-style */
@@ -17,6 +26,8 @@ import React, { Component } from 'react';
 import ButtonWraper from './ButtonWraper';
 import Screen from './Screen';
 import Button from './Button';
+import operate from '../logic/operate';
+import calculate from '../logic/calculate';
 // import calculate from '../logic/calculate';
 // import operate from '../logic/operate';
 
@@ -25,38 +36,39 @@ class Calculator extends Component {
     super(props);
 
     this.state = {
-       count: 0,
+      numberOne: 0,
+      numberTwo: 0,
+      operation: '',
     };
 
-    this.handleClick = () => this.setState({ count: this.state.count + 1 });
+    const calc = () => this.setState({ numberOne: () => operate() });
   }
 
   render() {
-    // const numbers = ['A/C', '+/-', '%', '÷', '7', '8', '9', 'x', '4', '5', '6', '-', '1', ' 2', '3', '+', '0', '.', '='];
-
-    const btnValues = [
+    const operations = [
       ['A/C', '+/-', '%', '÷'],
       [7, 8, 9, 'X'],
       [4, 5, 6, '-'],
       [1, 2, 3, '+'],
       [0, '.', '='],
     ];
-    // changeCount();
-    // const { count } = this.state;
+
+    const { numberOne, numberTwo, operation } = this.state;
+
     return (
       <div className="wrapper">
-        <Screen value="0" />
+        <Screen value={numberOne, numberTwo} />
         <ButtonWraper>
           {
-            btnValues.flat().map((btn, i) => {
+            operations.flat().map((btn, i) => {
               return (
                 <Button
                   key={i}
                   className={btn === '=' ? 'equals' : ''}
                   value={btn}
-                  onClick={() => {
-                    console.log(`${btn} clicked!`);
-                  }}
+                  onClick={
+                    () => console.log(this.state({ numberOne: 5, numberTwo: 6 }))
+                  }
                 />
               );
             })
