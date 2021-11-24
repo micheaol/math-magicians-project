@@ -27,7 +27,7 @@ class Calculator extends Component {
     return (
       <div className="wrapper">
         <Screen count={count} />
-        <ButtonWraper handleClick={() => this.handleClick(console.log(this.props))} />
+        <ButtonWraper handleClick={this.handleClick} />
       </div>
     );
   }
