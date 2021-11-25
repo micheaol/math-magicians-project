@@ -1,4 +1,3 @@
-/* eslint-disable linebreak-style */
 /* eslint-disable arrow-body-style */
 import './Calculator.css';
 import React, { useState } from 'react';

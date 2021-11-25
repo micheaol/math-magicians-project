@@ -1,6 +1,5 @@
-/* eslint-disable linebreak-style */
 /* eslint-disable arrow-body-style */
-/* eslint-disable react/prop-types */
+import PropTypes from 'prop-types';
 import React from 'react';
 import './Button.css';
 
@@ -10,6 +9,12 @@ const Button = ({ className, value, onClick }) => {
       {value}
     </button>
   );
+};
+
+Button.propTypes = {
+  value: PropTypes.node.isRequired,
+  className: PropTypes.node.isRequired,
+  onClick: PropTypes.node.isRequired,
 };
 
 export default Button;
