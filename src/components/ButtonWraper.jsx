@@ -1,14 +1,13 @@
 /* eslint-disable linebreak-style */
 /* eslint-disable react/prop-types */
-/* eslint-disable react/destructuring-assignment */
+/* eslint-disable arrow-body-style */
 import './ButtonWraper.css';
 import React from 'react';
 
-// eslint-disable-next-line react/prefer-stateless-function
-const ButtonWraper = () => {
+const ButtonWraper = ({ children }) => {
   return (
-    <div className="buttonBox">{props.children}</div>
+    <div className="buttonBox">{children}</div>
   );
-}
+};
 
 export default ButtonWraper;
