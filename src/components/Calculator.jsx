@@ -36,38 +36,48 @@ class Calculator extends Component {
     super(props);
 
     this.state = {
-      numberOne: 0,
-      numberTwo: 0,
-      // operation: '+',
+      total: null,
+      next: null,
+      operation: null,
     };
+  }
 
-    const calc = () => this.setState({ numberOne: () => operate() });
+  setNewState = (value) => {
+    const newState = calculate(this.state, value);
+    console.log(newState);
+    this.setState(newState);
+  }
+
+  handleClick = (e) => {
+     const buttonName = e.target.textContent;
+     this.setNewState(buttonName);
   }
 
   render() {
-    const operation = [
-      ['A/C', '+/-', '%', '÷'],
-      [7, 8, 9, 'X'],
+    const btnValues = [
+      ['AC', '+/-', '%', '÷'],
+      [7, 8, 9, 'x'],
       [4, 5, 6, '-'],
       [1, 2, 3, '+'],
       [0, '.', '='],
     ];
-
-    // const { numberOne, numberTwo, operation } = this.state;
-    console.log(calculate());
+      const { total, next, operation } = this.state;
     return (
       <div className="wrapper">
-        <Screen value={this.state.numberOne ? this.state.numberOne : this.state.numberTwo} />
+        <Screen value={operation == null
+            ? total || next || '0'
+            : `${total} ${operation} ${next == null ? ' ' : next}`}
+        />
         <ButtonWraper>
           {
-            operation.flat().map((btn, i) => {
+            btnValues.flat().map((btn, i) => {
               return (
                 <Button
                   key={i}
                   className={btn === '=' ? 'equals' : ''}
                   value={btn}
                   onClick={
-                   console.log('I am from click')
+                    this.handleClick
                   }
                 />
               );
