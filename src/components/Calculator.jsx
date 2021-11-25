@@ -42,10 +42,10 @@ const Calculator = () => {
       />
       <ButtonWraper>
         {
-            btnValues.flat().map((btn, i) => {
+            btnValues.flat().map((btn) => {
               return (
                 <Button
-                  key={i}
+                  key={btn}
                   className={btn === '=' ? 'equals' : ''}
                   value={btn}
                   onClick={
