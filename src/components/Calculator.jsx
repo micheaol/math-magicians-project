@@ -1,20 +1,7 @@
 /* eslint-disable linebreak-style */
-/* eslint-disable quotes */
-/* eslint-disable no-nested-ternary */
-/* eslint-disable linebreak-style */
-/* eslint-disable no-sequences */
-/* eslint-disable linebreak-style */
-/* eslint-disable no-unused-vars */
-/* eslint-disable linebreak-style */
-/* eslint-disable no-unneeded-ternary */
-/* eslint-disable linebreak-style */
 /* eslint-disable react/no-array-index-key */
 /* eslint-disable linebreak-style */
 /* eslint-disable arrow-body-style */
-/* eslint-disable linebreak-style */
-/* eslint-disable react/prop-types */
-/* eslint-disable linebreak-style */
-/* eslint-disable max-len */
 /* eslint-disable linebreak-style */
 /* eslint-disable react/no-access-state-in-setstate */
 /* eslint-disable react/destructuring-assignment */
@@ -26,7 +13,6 @@ import React, { Component } from 'react';
 import ButtonWraper from './ButtonWraper';
 import Screen from './Screen';
 import Button from './Button';
-import operate from '../logic/operate';
 import calculate from '../logic/calculate';
 // import calculate from '../logic/calculate';
 // import operate from '../logic/operate';
@@ -44,7 +30,6 @@ class Calculator extends Component {
 
   setNewState = (value) => {
     const newState = calculate(this.state, value);
-    console.log(newState);
     this.setState(newState);
   }
 
