@@ -10,16 +10,6 @@ import Button from './Button';
 import calculate from '../logic/calculate';
 
 
-// constructor(props) {
-//   super(props);
-
-//   this.state = {
-//     total: null,
-//     next: null,
-//     operation: null,
-//   };
-// }
-
 const Calculator = () => {
 
   const [state, setState ] = useState({
@@ -39,7 +29,7 @@ const Calculator = () => {
     const buttonName = e.target.textContent;
     this.setNewState(buttonName);
   };
-  
+
     const btnValues = [
       ['AC', '+/-', '%', '÷'],
       [7, 8, 9, 'x'],
@@ -63,7 +53,7 @@ const Calculator = () => {
                   className={btn === '=' ? 'equals' : ''}
                   value={btn}
                   onClick={
-                    this.handleClick
+                    handleClick
                   }
                 />
               );
