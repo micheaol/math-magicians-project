@@ -26,7 +26,9 @@ const Calculator = () => {
         total: null,
         next: null,
         operation: null,
-  })
+  });
+
+  const { total, next, operation } = state;
 
   setNewState = (value) => {
     const newState = calculate(this.state, value);
@@ -36,9 +38,8 @@ const Calculator = () => {
   handleClick = (e) => {
     const buttonName = e.target.textContent;
     this.setNewState(buttonName);
-  }
-
-  render() {
+  };
+  
     const btnValues = [
       ['AC', '+/-', '%', '÷'],
       [7, 8, 9, 'x'],
@@ -46,7 +47,7 @@ const Calculator = () => {
       [1, 2, 3, '+'],
       [0, '.', '='],
     ];
-    const { total, next, operation } = this.state;
+    
     return (
       <div className="wrapper">
         <Screen value={operation == null
@@ -71,7 +72,6 @@ const Calculator = () => {
         </ButtonWraper>
       </div>
     );
-  }
 }
 
 export default Calculator;
