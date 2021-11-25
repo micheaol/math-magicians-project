@@ -1,4 +1,3 @@
-/* eslint-disable arrow-body-style */
 import './Calculator.css';
 import React, { useState } from 'react';
 import ButtonWraper from './ButtonWraper';
@@ -40,18 +39,16 @@ const Calculator = () => {
       />
       <ButtonWraper>
         {
-            btnValues.flat().map((btn) => {
-              return (
-                <Button
-                  key={btn}
-                  className={btn === '=' ? 'equals' : ''}
-                  value={btn}
-                  onClick={
+            btnValues.flat().map((btn) => (
+              <Button
+                key={btn}
+                className={btn === '=' ? 'equals' : ''}
+                value={btn}
+                onClick={
                     handleClick
                   }
-                />
-              );
-            })
+              />
+            ))
           }
       </ButtonWraper>
     </div>
