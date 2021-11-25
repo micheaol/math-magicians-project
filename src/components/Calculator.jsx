@@ -1,33 +1,66 @@
 /* eslint-disable linebreak-style */
-/* eslint-disable react/no-access-state-in-setstate */
-/* eslint-disable react/destructuring-assignment */
-/* eslint-disable linebreak-style */
-/* eslint-disable indent */
+/* eslint-disable react/no-array-index-key */
+/* eslint-disable arrow-body-style */
 /* eslint-disable react/prefer-stateless-function */
 import './Calculator.css';
 import React, { Component } from 'react';
 import ButtonWraper from './ButtonWraper';
 import Screen from './Screen';
-// import calculate from '../logic/calculate';
-// import operate from '../logic/operate';
+import Button from './Button';
+import calculate from '../logic/calculate';
 
 class Calculator extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-       count: 0,
+      total: null,
+      next: null,
+      operation: null,
     };
+  }
 
-    this.handleClick = () => this.setState({ count: this.state.count + 1 });
+  setNewState = (value) => {
+    const newState = calculate(this.state, value);
+    this.setState(newState);
+  }
+
+  handleClick = (e) => {
+    const buttonName = e.target.textContent;
+    this.setNewState(buttonName);
   }
 
   render() {
-    const { count } = this.state;
+    const btnValues = [
+      ['AC', '+/-', '%', '÷'],
+      [7, 8, 9, 'x'],
+      [4, 5, 6, '-'],
+      [1, 2, 3, '+'],
+      [0, '.', '='],
+    ];
+    const { total, next, operation } = this.state;
     return (
       <div className="wrapper">
-        <Screen count={count} />
-        <ButtonWraper handleClick={() => this.handleClick(console.log(this.props))} />
+        <Screen value={operation == null
+          ? total || next || '0'
+          : `${total} ${operation} ${next == null ? ' ' : next}`}
+        />
+        <ButtonWraper>
+          {
+            btnValues.flat().map((btn, i) => {
+              return (
+                <Button
+                  key={i}
+                  className={btn === '=' ? 'equals' : ''}
+                  value={btn}
+                  onClick={
+                    this.handleClick
+                  }
+                />
+              );
+            })
+          }
+        </ButtonWraper>
       </div>
     );
   }
