@@ -1,23 +1,32 @@
+/* eslint-disable linebreak-style */
 /* eslint-disable react/no-array-index-key */
 /* eslint-disable arrow-body-style */
 /* eslint-disable react/prefer-stateless-function */
 import './Calculator.css';
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import ButtonWraper from './ButtonWraper';
 import Screen from './Screen';
 import Button from './Button';
 import calculate from '../logic/calculate';
 
-class Calculator extends Component {
-  constructor(props) {
-    super(props);
 
-    this.state = {
-      total: null,
-      next: null,
-      operation: null,
-    };
-  }
+// constructor(props) {
+//   super(props);
+
+//   this.state = {
+//     total: null,
+//     next: null,
+//     operation: null,
+//   };
+// }
+
+const Calculator = () => {
+
+  const [state, setState ] = useState({
+        total: null,
+        next: null,
+        operation: null,
+  })
 
   setNewState = (value) => {
     const newState = calculate(this.state, value);
