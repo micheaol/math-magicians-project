@@ -1,18 +1,17 @@
-/* eslint-disable linebreak-style */
-/* eslint-disable react/prop-types */
-/* eslint-disable react/destructuring-assignment */
-import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import './Button.css';
 
-// eslint-disable-next-line react/prefer-stateless-function
-class Button extends Component {
-  render() {
-    return (
-      <button className={this.props.className} onClick={this.props.onClick} type="submit">
-        {this.props.value}
-      </button>
-    );
-  }
-}
+const Button = ({ className, value, onClick }) => (
+  <button className={className} onClick={onClick} type="submit">
+    {value}
+  </button>
+);
+
+Button.propTypes = {
+  value: PropTypes.node.isRequired,
+  className: PropTypes.node.isRequired,
+  onClick: PropTypes.node.isRequired,
+};
 
 export default Button;

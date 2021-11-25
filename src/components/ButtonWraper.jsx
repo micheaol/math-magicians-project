@@ -1,16 +1,13 @@
-/* eslint-disable linebreak-style */
-/* eslint-disable react/prop-types */
-/* eslint-disable react/destructuring-assignment */
+import PropTypes from 'prop-types';
 import './ButtonWraper.css';
-import React, { Component } from 'react';
+import React from 'react';
 
-// eslint-disable-next-line react/prefer-stateless-function
-class ButtonWraper extends Component {
-  render() {
-    return (
-      <div className="buttonBox">{this.props.children}</div>
-    );
-  }
-}
+const ButtonWraper = ({ children }) => (
+  <div className="buttonBox">{children}</div>
+);
+
+ButtonWraper.propTypes = {
+  children: PropTypes.node.isRequired,
+};
 
 export default ButtonWraper;
