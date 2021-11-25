@@ -1,12 +1,6 @@
 /* eslint-disable linebreak-style */
 /* eslint-disable react/no-array-index-key */
-/* eslint-disable linebreak-style */
 /* eslint-disable arrow-body-style */
-/* eslint-disable linebreak-style */
-/* eslint-disable react/no-access-state-in-setstate */
-/* eslint-disable react/destructuring-assignment */
-/* eslint-disable linebreak-style */
-/* eslint-disable indent */
 /* eslint-disable react/prefer-stateless-function */
 import './Calculator.css';
 import React, { Component } from 'react';
@@ -14,8 +8,6 @@ import ButtonWraper from './ButtonWraper';
 import Screen from './Screen';
 import Button from './Button';
 import calculate from '../logic/calculate';
-// import calculate from '../logic/calculate';
-// import operate from '../logic/operate';
 
 class Calculator extends Component {
   constructor(props) {
@@ -34,8 +26,8 @@ class Calculator extends Component {
   }
 
   handleClick = (e) => {
-     const buttonName = e.target.textContent;
-     this.setNewState(buttonName);
+    const buttonName = e.target.textContent;
+    this.setNewState(buttonName);
   }
 
   render() {
@@ -46,12 +38,12 @@ class Calculator extends Component {
       [1, 2, 3, '+'],
       [0, '.', '='],
     ];
-      const { total, next, operation } = this.state;
+    const { total, next, operation } = this.state;
     return (
       <div className="wrapper">
         <Screen value={operation == null
-            ? total || next || '0'
-            : `${total} ${operation} ${next == null ? ' ' : next}`}
+          ? total || next || '0'
+          : `${total} ${operation} ${next == null ? ' ' : next}`}
         />
         <ButtonWraper>
           {
