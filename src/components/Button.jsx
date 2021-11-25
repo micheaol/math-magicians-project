@@ -1,7 +1,6 @@
 /* eslint-disable linebreak-style */
 /* eslint-disable arrow-body-style */
 /* eslint-disable react/prop-types */
-
 import React from 'react';
 import './Button.css';
 
