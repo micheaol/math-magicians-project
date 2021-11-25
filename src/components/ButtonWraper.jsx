@@ -1,4 +1,3 @@
-/* eslint-disable linebreak-style */
 /* eslint-disable react/prop-types */
 /* eslint-disable react/destructuring-assignment */
 import './ButtonWraper.css';
