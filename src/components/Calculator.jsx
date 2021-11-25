@@ -21,13 +21,13 @@ const Calculator = () => {
   const { total, next, operation } = state;
 
   setNewState = (value) => {
-    const newState = calculate(this.state, value);
-    this.setState(newState);
+    const newState = calculate(state, value);
+        setState(newState);
   }
 
   handleClick = (e) => {
     const buttonName = e.target.textContent;
-    this.setNewState(buttonName);
+    setNewState(buttonName);
   };
 
     const btnValues = [
