@@ -1,16 +1,16 @@
 nav {
-    display: flex;
-    justify-content: space-between;
-    width: 80%;
-    margin-left: 5%;
-  }
-  
-  nav ul{
-    display: flex;
-    align-self:flex-start;
-  }
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin-left: 5%;
+}
 
-  nav ul li{
-      margin: 2%;
-      list-style-type: none;
-  }
+nav ul {
+  display: flex;
+  align-self: flex-start;
+}
+
+nav ul li {
+  margin: 2%;
+  list-style-type: none;
+}
