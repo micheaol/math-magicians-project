@@ -1,5 +1,15 @@
-.App {
-  text-align: center;
-  display: flex;
-  justify-content: center;
+@import url('https://fonts.googleapis.com/css2?family=Mohave:ital,wght@1,300&family=Roboto+Condensed:wght@700&family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mohave:ital,wght@1,300&family=Outfit:wght@300&display=swap');
+
+.home-wrapper {
+  text-align: start;
+  padding: 5%;
+  font-family: 'Outfit', sans-serif;
 }
+
+.quote-wrapper {
+  text-align: center;
+  margin-top: 15%;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+

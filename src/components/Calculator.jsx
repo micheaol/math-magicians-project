@@ -32,13 +32,15 @@ const Calculator = () => {
     [0, '.', '='],
   ];
   return (
-    <div className="wrapper">
-      <Screen value={operation == null
-        ? total || next || '0'
-        : `${total} ${operation} ${next == null ? ' ' : next}`}
-      />
-      <ButtonWraper>
-        {
+    <div className="main-wrapper">
+      <h1>Lets do some math!</h1>
+      <div className="wrapper">
+        <Screen value={operation == null
+          ? total || next || '0'
+          : `${total} ${operation} ${next == null ? ' ' : next}`}
+        />
+        <ButtonWraper>
+          {
             btnValues.flat().map((btn) => (
               <Button
                 key={btn}
@@ -50,7 +52,8 @@ const Calculator = () => {
               />
             ))
           }
-      </ButtonWraper>
+        </ButtonWraper>
+      </div>
     </div>
   );
 };
