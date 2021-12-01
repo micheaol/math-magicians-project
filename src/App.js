@@ -8,7 +8,7 @@ import Quote from './components/Quote';
 function App() {
   return (
     <Router>
-      <div>
+      <div data-testid="app">
         <Navbar />
         <Switch>
           <Route exact path="/">
