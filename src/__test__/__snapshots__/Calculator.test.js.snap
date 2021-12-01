@@ -13,6 +13,7 @@ exports[`render calculator component to the screen matches snapshot 1`] = `
   >
     <div
       className="screen"
+      data-testid="screen"
     >
       <h1>
         0
@@ -20,6 +21,7 @@ exports[`render calculator component to the screen matches snapshot 1`] = `
     </div>
     <div
       className="buttonBox"
+      data-testid="button-wraper"
     >
       <button
         className=""

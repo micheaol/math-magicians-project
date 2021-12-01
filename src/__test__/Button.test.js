@@ -5,9 +5,13 @@ import Button from '../components/Button';
 afterEach(() => {
   cleanup();
 });
+
+const handleClick = () => {
+
+};
 describe('render button component to the screen', () => {
   test('should render button component', () => {
-    render(<Button />);
+    render(<Button onClick={handleClick} />);
     const buttonElement = screen.getByTestId('button');
     expect(buttonElement).toBeInTheDocument();
   });

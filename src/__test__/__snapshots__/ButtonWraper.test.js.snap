@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render component to screen matches snapshot 1`] = `
+<div
+  className="buttonBox"
+  data-testid="button-wraper"
+>
+  AC
+  +/-
+  %
+  ÷
+  7
+  8
+  9
+  x
+  4
+  5
+  6
+  -
+  1
+  2
+  3
+  +
+  0
+  .
+  =
+</div>
+`;

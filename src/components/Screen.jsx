@@ -3,7 +3,7 @@ import React from 'react';
 import './Screen.css';
 
 const Screen = ({ value }) => (
-  <div className="screen">
+  <div className="screen" data-testid="screen">
     <h1>{value}</h1>
   </div>
 );
