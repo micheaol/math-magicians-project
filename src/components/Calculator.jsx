@@ -32,7 +32,7 @@ const Calculator = () => {
     [0, '.', '='],
   ];
   return (
-    <div className="main-wrapper">
+    <div className="main-wrapper" data-testid="calculator">
       <h1>Lets do some math!</h1>
       <div className="wrapper">
         <Screen value={operation == null

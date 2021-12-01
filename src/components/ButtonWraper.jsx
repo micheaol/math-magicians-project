@@ -3,7 +3,7 @@ import './ButtonWraper.css';
 import React from 'react';
 
 const ButtonWraper = ({ children }) => (
-  <div className="buttonBox">{children}</div>
+  <div className="buttonBox" data-testid="button-wraper">{children}</div>
 );
 
 ButtonWraper.propTypes = {

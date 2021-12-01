@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render button component to the screen matches snapshot 1`] = `
+<button
+  data-testid="button"
+  type="submit"
+/>
+`;

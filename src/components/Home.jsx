@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Home = () => (
-  <div className="home-wrapper">
+  <div className="home-wrapper" data-testid="home">
     <h1>Welcome to our page!</h1>
     <div>
       <p>Lo,ipsumdolorsit amet consecteturadipisicing elit Asperiores adipisicingelit Asperiores</p>
