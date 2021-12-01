@@ -6,7 +6,7 @@ describe('Calculate', () => {
     next: null,
     operation: null,
   };
-  
+
   test('the function returns an object', () => {
     expect(typeof (calculate(obj, 'AC'))).toBe('object');
   });
