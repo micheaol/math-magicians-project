@@ -1,19 +1,35 @@
 import operate from '../logic/operate';
 
-describe('test operate function', () => {
-  test('add 2 and 3 to be 5', () => {
-    expect(operate(2, 3, '+')).toBe('5');
+describe('Test operations', () => {
+  test('Function returns a string', () => {
+    expect(typeof (operate('2', '2', '+'))).toBe('string');
   });
 
-  test('divide 4 by 2 to be 2', () => {
-    expect(operate(4, 2, '÷')).toBe('2');
+  test('2 + 2 returns 4', () => {
+    expect(operate('2', '2', '+')).toBe('4');
   });
 
-  test('multiply 2 by 2 to be 4', () => {
-    expect(operate(2, 2, 'x')).toBe('4');
+  test('2 - 2 returns 0', () => {
+    expect(operate('2', '2', '-')).toBe('0');
   });
 
-  test('minus 2 from 4 to be 2', () => {
-    expect(operate(4, 2, '-')).toBe('2');
+  test('2 x 2 returns 4', () => {
+    expect(operate('2', '2', 'x')).toBe('4');
+  });
+
+  test('2 ÷ 2 returns 1', () => {
+    expect(operate('2', '2', '÷')).toBe('1');
+  });
+
+  test('2 ÷ 0 returns an error message', () => {
+    expect(operate('2', '0', '÷')).toBe("Can't divide by 0.");
+  });
+
+  test('5 % 2 returns 1', () => {
+    expect(operate('5', '2', '%')).toBe('1');
+  });
+
+  test('Using and unknow operation throws an error', () => {
+    expect(() => operate('5', '2', '/')).toThrow("Unknown operation '/'");
   });
 });

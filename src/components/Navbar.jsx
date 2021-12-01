@@ -3,7 +3,7 @@ import './Navbar.css';
 import { Link } from 'react-router-dom';
 
 const Navbar = () => (
-  <nav>
+  <nav data-testid="nav">
     <h1>Math Magician</h1>
     <ul>
       <li>

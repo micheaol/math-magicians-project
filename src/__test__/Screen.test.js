@@ -14,7 +14,7 @@ describe('render screen to the Dom', () => {
   });
 
   test('matches snapshot', () => {
-    const tree = renderer.create(<Screen />);
+    const tree = renderer.create(<Screen />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 });

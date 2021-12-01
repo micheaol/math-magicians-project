@@ -22,7 +22,7 @@ describe('render component to screen', () => {
   });
 
   test('matches snapshot', () => {
-    const tree = renderer.create(<ButtonWraper>{btnValues}</ButtonWraper>);
+    const tree = renderer.create(<ButtonWraper>{btnValues}</ButtonWraper>).toJSON();
     expect(tree).toMatchSnapshot();
   });
 });

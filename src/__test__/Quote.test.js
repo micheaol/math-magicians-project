@@ -13,7 +13,7 @@ describe('render quote to screen', () => {
   });
 
   test('matches snapshot', () => {
-    const tree = renderer.create(<Quote />);
+    const tree = renderer.create(<Quote />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 });
