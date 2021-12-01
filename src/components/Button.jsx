@@ -3,7 +3,7 @@ import React from 'react';
 import './Button.css';
 
 const Button = ({ className, value, onClick }) => (
-  <button className={className} onClick={onClick} type="submit">
+  <button className={className} onClick={onClick} type="submit" data-testid="button">
     {value}
   </button>
 );
