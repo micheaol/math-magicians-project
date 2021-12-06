@@ -1,0 +1,88 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render App to the screen matches snapshot 1`] = `
+<div
+  data-testid="app"
+>
+  <nav
+    data-testid="nav"
+  >
+    <h1>
+      Math Magician
+    </h1>
+    <ul>
+      <li>
+        <a
+          href="/"
+          onClick={[Function]}
+        >
+          Home
+        </a>
+      </li>
+      <li>
+        |
+      </li>
+      <li>
+        <a
+          href="/calculator"
+          onClick={[Function]}
+        >
+          Calculator
+        </a>
+      </li>
+      <li>
+        |
+      </li>
+      <li>
+        <a
+          href="/quote"
+          onClick={[Function]}
+        >
+          Qoute
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <div
+    className="home-wrapper"
+    data-testid="home"
+  >
+    <h1>
+      Welcome to our page!
+    </h1>
+    <div>
+      <p>
+        Lo,ipsumdolorsit amet consecteturadipisicing elit Asperiores adipisicingelit Asperiores
+      </p>
+      <p>
+        Lo,ipsumdolorsit amet consecteturadipisicing elit Asperiores adipisicingelit Asperiores
+      </p>
+      <p>
+        Lo,ipsumdolorsit amet consecteturadipisicing elit Asperiores adipisicingelit Asperiores
+      </p>
+    </div>
+    <div>
+      <p>
+        Lo,ipsumdolorsit amet consecteturadipisicing elit Asperiores adipisicingelit Asperiores
+      </p>
+      <p>
+        Lo,ipsumdolorsit amet consecteturadipisicing elit Asperiores adipisicingelit Asperiores
+      </p>
+      <p>
+        Lo,ipsumdolorsit amet consecteturadipisicing elit Asperiores adipisicingelit Asperiores
+      </p>
+    </div>
+    <div>
+      <p>
+        Lo,ipsumdolorsit amet consecteturadipisicing elit Asperiores adipisicingelit Asperiores
+      </p>
+      <p>
+        Lo,ipsumdolorsit amet consecteturadipisicing elit Asperiores adipisicingelit Asperiores
+      </p>
+      <p>
+        Lo,ipsumdolorsit amet consecteturadipisicing elit Asperiores adipisicingelit Asperiores
+      </p>
+    </div>
+  </div>
+</div>
+`;

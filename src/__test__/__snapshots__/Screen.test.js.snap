@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render screen to the Dom matches snapshot 1`] = `
+<div
+  className="screen"
+  data-testid="screen"
+>
+  <h1 />
+</div>
+`;
