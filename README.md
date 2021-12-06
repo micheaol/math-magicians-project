@@ -6,7 +6,7 @@ Thai application allows you to carry basic calculation.
 
 Additional description about the project and its features.
 
-Leaderboard app is built to practice ES6 syntax, and Module Patterns concepts. Built with JavaScript, CSS, and Webpack.
+Leaderboard app is built to practice ES6 syntax, and Module Patterns concepts. Built with React, JavaScript, CSS, and Webpack.
 
 ## Built With
 
