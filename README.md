@@ -25,6 +25,7 @@ Leaderboard app is built to practice ES6 syntax, and Module Patterns concepts. B
 ## Live Demo
 
 [Live Demo Link](https://math-magicians-project.netlify.app/)
+[Live Demo Link](https://pacific-woodland-60841.herokuapp.com/)
 
    
 ## Prerequisites 
