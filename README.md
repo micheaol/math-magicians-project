@@ -6,7 +6,7 @@ Thai application allows you to carry basic calculation.
 
 Additional description about the project and its features.
 
-Leaderboard app is built to practice ES6 syntax, and Module Patterns concepts. Built with React, JavaScript, CSS, and Webpack.
+Math-magicians app is built to practice ES6 syntax, and Module Patterns concepts. Built with React, JavaScript, CSS, and Webpack.
 
 ## Built With
 
@@ -24,8 +24,7 @@ Leaderboard app is built to practice ES6 syntax, and Module Patterns concepts. B
     
 ## Live Demo
 
-[Live Demo Link](https://math-magicians-project.netlify.app/)
-[Live Demo Link](https://pacific-woodland-60841.herokuapp.com/)
+[Live Demo Link](https://math-magician-project.netlify.app/)
 
    
 ## Prerequisites 
